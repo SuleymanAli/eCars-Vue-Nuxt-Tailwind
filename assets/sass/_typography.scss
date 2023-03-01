@@ -1,0 +1,133 @@
+@layer base {
+  $fontFaces: (
+    ('Black', 900),
+    ('ExtraBold', 'bold'),
+    ('Bold', 'bold'),
+    ('ExtraLight', 200),
+    ('Medium', 500),
+    ('Light', '300'),
+    ('Regular', normal),
+    ('SemiBold', 600),
+    ('Thin', '100')
+  );
+
+  @each $name, $weight in $fontFaces {
+    @font-face {
+      font-family: 'Inter';
+      src: url('../fonts/Inter/Inter-#{$name}.woff2') format('woff2'),
+        url('../fonts/Inter/Inter-#{$name}.woff') format('woff');
+      font-weight: #{$weight};
+      font-style: normal;
+      font-display: swap;
+    }
+  }
+
+  $headingFontSizes: (
+    '.title': (
+      '42',
+      '60',
+      '600',
+      '',
+    ),
+    'h1, .h1': (
+      '34',
+      '44',
+      '600',
+      '',
+    ),
+    'h2, .h2': (
+      '30',
+      '38',
+      '600',
+      '',
+    ),
+    'h3, .h3': (
+      '26',
+      '32',
+      '600',
+      '',
+    ),
+    'h4, .h4': (
+      '22',
+      '26',
+      '600',
+      '',
+    ),
+    'h5, .h5': (
+      '19',
+      '22',
+      '600',
+      '',
+    ),
+    'h6, .h6': (
+      '17',
+      '18',
+      '600',
+      '',
+    ),
+    '.p-large': (
+      '17',
+      '19',
+      '400',
+      '',
+    ),
+    '.p-small': (
+      '',
+      '14',
+      '400',
+      '20',
+    ),
+    '.p-small-2x': (
+      '',
+      '12',
+      '400',
+      '16',
+    ),
+    '.label': (
+      '',
+      '16',
+      '600',
+      '20',
+    ),
+    '.label-secondary': (
+      '',
+      '14',
+      '600',
+      '20',
+    ),
+    '.caption': (
+      '',
+      '13',
+      '600',
+      '20',
+    ),
+    '.caption-secondary': (
+      '',
+      '12',
+      '600',
+      '16',
+    ),
+  );
+
+  @each $heading, $size in $headingFontSizes {
+    #{$heading} {
+      font-weight: #{nth($size, 3)};
+      font-size: #{nth($size, 2)}px;
+
+      @if (nth($size, 1) != '') {
+        @media screen and (max-width: 768px) {
+          font-size: #{nth($size, 1)}px;
+        }
+      }
+
+      @if (nth($size, 4) != '') {
+        line-height: #{nth($size, 4)}px;
+      }
+    }
+  }
+}
+
+.caption,
+.caption-secondary {
+  @apply tracking-wide;
+}
