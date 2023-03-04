@@ -44,7 +44,7 @@
         2022 Land Cruiser, panoramic roof, black interior, LED headlights and
         automatic gearbox. A brand new car with GCC specifications.
       </p>
-      <p class="mb-3 text-xs text-gray-300">Used • 27,057 mi • Petrol</p>
+      <p class="mb-3 text-xs text-gray-300" v-else>Used • 27,057 mi • Petrol</p>
       <!-- Bottom -->
       <div class="mt-auto flex justify-between">
         <!-- Price -->

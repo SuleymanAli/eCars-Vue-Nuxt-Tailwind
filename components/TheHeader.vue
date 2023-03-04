@@ -46,7 +46,9 @@
       <div class="flex justify-between">
         <nav class="flex list-none items-center">
           <li class="mr-6">
-            <img src="/logo.svg" alt="" />
+            <nuxt-link to="/">
+              <img src="/logo.svg" alt="" />
+            </nuxt-link>
           </li>
           <li class="mx-4">
             <a href="/" class="label-secondary leading-relaxed text-gray-900">
