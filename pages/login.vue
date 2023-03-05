@@ -41,9 +41,7 @@
             </p>
           </div>
           <div class="relative my-6 text-center">
-            <span
-              class="p-small ext-gray-500 relative z-10 bg-white p-2 text-gray-500"
-            >
+            <span class="p-small relative z-10 bg-white p-2 text-gray-500">
               or</span
             >
             <div

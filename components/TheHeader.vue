@@ -78,11 +78,13 @@
             <NuxtIcon name="profile" class="text-xl" />
           </div>
           <div>
-            <button
-              class="label-secondary rounded-lg bg-primary-500 py-1.5 px-3 leading-relaxed text-white"
-            >
-              Get a quote
-            </button>
+            <nuxt-link to="/login">
+              <button
+                class="label-secondary rounded-lg bg-primary-500 py-1.5 px-3 leading-relaxed text-white"
+              >
+                Get a quote
+              </button>
+            </nuxt-link>
           </div>
         </div>
       </div>
